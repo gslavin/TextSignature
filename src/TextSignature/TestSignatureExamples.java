@@ -22,8 +22,8 @@ public class TestSignatureExamples {
     public static void mashupExample() {
         int wordCount = 100;
         TextSignature text = new TextSignature();
-        text.addFileText("Huck.txt");
-        text.addFileText("Alice.txt");
+        text.addFileText("sampleTexts/Huck.txt");
+        text.addFileText("sampleTexts/Alice.txt");
         System.out.print(text.writeText(wordCount));
     }
     
@@ -37,8 +37,8 @@ public class TestSignatureExamples {
     public static void compareExample() {
         TextSignature text1 = new TextSignature();
         TextSignature text2 = new TextSignature();
-        text1.addFileText("LookingGlass.txt");
-        text2.addFileText("Alice.txt");
+        text1.addFileText("sampleTexts/LookingGlass.txt");
+        text2.addFileText("sampleTexts/Alice.txt");
         System.out.println("Map 1 size: " + text1.getMapSize());
         System.out.println("Map 2 size: " + text2.getMapSize());
 
@@ -58,7 +58,7 @@ public class TestSignatureExamples {
                 + "would thou couldst; For who would bear the whips and scorns of time, The"
                 + "oppressor's wrong, the proud man's contumely, The law's delay, and the";
         TextSignature refText = new TextSignature();
-        refText.addFileText("Alice.txt");
+        refText.addFileText("sampleTexts/Alice.txt");
         System.out.println(refText.summarizeText(input1, 0.9));
     }
 }
